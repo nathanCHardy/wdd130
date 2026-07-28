@@ -1,6 +1,7 @@
 :root {
     --primary-color: #14476b; /* deep river blue */
     --secondary-color: #c93c2a; /* raft red */
+    --secondary-color-dark: #8f2418; /* darker raft red, meets AAA contrast (7:1) with white text */
     --accent1-color: #22303a; /* dark slate */
     --accent2-color: #f2ede4; /* sandstone white */
     --heading-font: Georgia, "Times New Roman", serif;
@@ -319,7 +320,7 @@ fieldset.form-row legend {
 
 .submit-btn {
     align-self: stretch;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color-dark);
     color: #fff;
     font-weight: bold;
     font-size: 1rem;
@@ -331,5 +332,5 @@ fieldset.form-row legend {
 }
 
 .submit-btn:hover {
-    background-color: #a02e20;
+    background-color: #6e1b12;
 }
