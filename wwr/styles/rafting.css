@@ -307,6 +307,7 @@ fieldset.form-row legend {
 .radio-option,
 .checkbox-option {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 0.5rem;
     margin: 0.25rem 0;
