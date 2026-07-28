@@ -195,3 +195,141 @@ footer nav.socialmedia {
     margin: 0;
     padding: 0;
 }
+
+.contact-intro {
+    text-align: center;
+}
+
+.contact-intro address {
+    font-style: normal;
+    margin-top: 0.5rem;
+}
+
+.contact-intro address p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.contact-intro a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-main {
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+iframe.map {
+    display: block;
+    flex: 1 1 0;
+    width: 100%;
+    min-height: 300px;
+    border: 0;
+    border-radius: 4px;
+}
+
+.team {
+    text-align: center;
+    background-color: var(--accent2-color);
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
+}
+
+.team-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.team-gallery figure {
+    flex: 1 1 0;
+}
+
+.team-gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-row label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+fieldset.form-row {
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+}
+
+fieldset.form-row legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.radio-option label,
+.checkbox-option label {
+    font-weight: normal;
+    margin: 0;
+}
+
+.submit-btn {
+    align-self: stretch;
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background-color: #a02e20;
+}
