@@ -20,7 +20,8 @@ body {
 }
 
 header, main, footer {
-    width: 840px;
+    width: 100%;
+    max-width: 840px;
     margin: 0 auto;
 }
 
@@ -281,7 +282,9 @@ iframe.map {
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
-.contact-form textarea {
+.contact-form textarea,
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
     padding: 0.5rem;
     border: 1px solid var(--accent1-color);
     border-radius: 4px;
@@ -334,4 +337,262 @@ fieldset.form-row legend {
 
 .submit-btn:hover {
     background-color: #6e1b12;
+}
+
+/* Shared call-to-action button */
+
+.button {
+    display: inline-block;
+    align-self: start;
+    margin-top: 0.75rem;
+    padding: 12px 24px;
+    background-color: var(--secondary-color-dark);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #6e1b12;
+}
+
+.hero article .button {
+    margin-top: 0.5rem;
+}
+
+/* Home page: offerings grid */
+
+.offerings {
+    text-align: center;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.offering-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.offering-text h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.offering-text p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Home and trips pages: call-to-action band */
+
+.cta-band {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+}
+
+.cta-band h2 {
+    color: var(--accent2-color);
+}
+
+.cta-band p {
+    margin: 0.75rem auto 0;
+    padding: 0;
+    max-width: 34rem;
+}
+
+.cta-band .button {
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+}
+
+.cta-band .button:hover {
+    background-color: #fff;
+}
+
+/* Home page: newsletter sign up */
+
+.newsletter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.5rem;
+    background-color: var(--accent2-color);
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+}
+
+.newsletter h2 {
+    grid-column: 1 / 3;
+}
+
+.newsletter p {
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Trips page */
+
+.trips-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.trips-intro p {
+    margin: 0.5rem 0 0;
+    padding: 0;
+}
+
+.trip {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.trip-reverse {
+    grid-template-columns: 1fr 320px;
+}
+
+.trip-reverse figure {
+    order: 2;
+}
+
+.trip img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.trip figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.trip-details p {
+    margin: 0 0 0.75rem;
+    padding: 0;
+}
+
+.trip-facts {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem 1rem;
+    padding: 0.75rem;
+    background-color: var(--accent2-color);
+    border-left: 4px solid var(--secondary-color-dark);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.trip-table caption {
+    caption-side: bottom;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: left;
+}
+
+.trip-table th,
+.trip-table td {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--accent1-color);
+    text-align: left;
+}
+
+.trip-table thead th {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+.trip-table tbody tr:nth-child(even) {
+    background-color: var(--accent2-color);
+}
+
+.trip-table .table-note {
+    margin: 0.75rem 0 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+/* Narrow screens */
+
+@media screen and (max-width: 760px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        position: static;
+        opacity: 1;
+    }
+
+    .hero article {
+        position: static;
+        margin: 0;
+    }
+
+    .history,
+    .gallery,
+    .team-gallery,
+    .contact-main,
+    .offerings-grid,
+    .newsletter,
+    .trip,
+    .trip-reverse {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trip-reverse figure {
+        order: 0;
+    }
+
+    /* the 6 column table cannot shrink any further, so let it scroll */
+    .trip-table {
+        overflow-x: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
 }
